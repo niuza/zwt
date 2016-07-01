@@ -11,6 +11,11 @@ body{height:100%;margin:0px;padding:0px}
 </style>  
 <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=zAbR98Eb26Rz3DvvOl1mua2UHgOyfWUH"></script>
 <script>
+var  mapStyle ={ 
+        features: ["road", "building","water","land"],//隐藏地图上的poi
+        style : "light"  //设置地图风格为高端黑
+    }
+map.setMapStyle(mapStyle);
   function getLocation(){
                var options={
                    enableHighAccuracy:true, 
