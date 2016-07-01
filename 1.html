@@ -25,10 +25,10 @@ var  mapStyle ={
     }
 map.setMapStyle(mapStyle);
 //添加标注
-var pt = new BMap.Point(116.417, 39.909);
+var pt = new BMap.Point(116.190526,23.709802);
 var myIcon = new BMap.Icon("images/point_marker.gif", new BMap.Size(300,157));
-	var marker = new BMap.Marker(pt,{icon:myIcon});  // 创建标注
-	map.addOverlay(marker);              // 将标注添加到地图中
+var marker = new BMap.Marker(pt,{icon:myIcon});  // 创建标注
+map.addOverlay(marker);              // 将标注添加到地图中
 
 
 
