@@ -17,13 +17,21 @@ body, html,#allmap {width: 100%;height: 100%;overflow: hidden;margin:0;font-fami
 <script type="text/javascript">
 var map = new BMap.Map('allmap');
 map.centerAndZoom(new BMap.Point(116.190526,23.709802), 12);
-
+map.enableScrollWheelZoom();   //启用滚轮放大缩小，默认禁用
+map.enableContinuousZoom();    //启用地图惯性拖拽，默认禁用
 var  mapStyle ={ 
         features: ["road", "building","water","land"],//隐藏地图上的poi
         style : "light"  //设置地图风格为高端黑
     }
 map.setMapStyle(mapStyle);
- 
+//添加标注
+var pt = new BMap.Point(116.417, 39.909);
+var myIcon = new BMap.Icon("images/point_marker.gif", new BMap.Size(300,157));
+	var marker = new BMap.Marker(pt,{icon:myIcon});  // 创建标注
+	map.addOverlay(marker);              // 将标注添加到地图中
+
+
+
 function checkhHtml5()   
         {   
             if (typeof(Worker) === "undefined")     
